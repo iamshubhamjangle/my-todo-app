@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ passed_todo.title }}</h5>
+      <p class="card-text">{{ passed_todo.desc }}</p>
+      <div class="d-flex justify-content-between">          
+          <Button class="btn btn-primary btn-sm" (click)="onDoneClick()" >Done</Button>
+          <Button class="btn btn-outline-danger btn-sm" (click)="onDeleteClick(passed_todo)">Delete</Button>
+      </div>
+    </div>
+  </div>

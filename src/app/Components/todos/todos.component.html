@@ -1,0 +1,3 @@
+<ul *ngFor="let todo of todos">
+    <app-todo-item [passed_todo]="todo" class="list-inline-item" (todoDelete)="deleteFunction($event)"></app-todo-item>
+</ul>
