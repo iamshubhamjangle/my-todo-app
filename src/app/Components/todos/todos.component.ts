@@ -41,4 +41,8 @@ export class TodosComponent implements OnInit {
     this.todos.splice(index, 1);    
   }
 
+  addFunction(todo: Todo): void {
+    this.todos.push(todo);
+  }
+
 }

@@ -1,3 +1,12 @@
-<ul *ngFor="let todo of todos">
-    <app-todo-item [passed_todo]="todo" class="list-inline-item" (todoDelete)="deleteFunction($event)"></app-todo-item>
-</ul>
+<app-add-todo (todoAdd)="addFunction($event)"></app-add-todo>
+<h3>Your Todo's</h3>
+
+<div *ngIf="this.todos.length === 0; else elseBlock">
+    <p>No todo found. Please add some todos to your bucket</p>
+</div>
+
+<ng-template #elseBlock>
+    <ul *ngFor="let todo of todos">
+        <app-todo-item [passed_todo]="todo" class="list-inline-item" (todoDelete)="deleteFunction($event)"></app-todo-item>
+    </ul>
+</ng-template>
